@@ -43,7 +43,7 @@ class ViewControllerMusic: UIViewController,UITableViewDataSource,UITableViewDel
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ArtisArray.count
+        return 20 //ArtisArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
