@@ -8,15 +8,16 @@
 
 import UIKit
 
-class ViewControllerMusic: UIViewController {
+class ViewControllerMusic: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     private let musicModels = MusicModel()
-    
+    var ArtisArray = [String]()
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         loadDataFromApi()
         
     }
@@ -41,6 +42,21 @@ class ViewControllerMusic: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ArtisArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
+     
+        cell.LabelArtistName.text = "artist test" //ArtisArray[indexPath.row]
+        cell.LabelCollectionName.text = "Test name"
+       
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 
 }
 
