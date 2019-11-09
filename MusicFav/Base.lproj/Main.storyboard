@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="82" id="qDS-c0-1PL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="qDS-c0-1PL" customClass="TableViewCell" customModule="MusicFav" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qDS-c0-1PL" id="TsH-H8-HYO">
@@ -89,6 +89,11 @@
                                                 <constraint firstItem="BQL-Fd-2CP" firstAttribute="top" secondItem="TsH-H8-HYO" secondAttribute="top" constant="5" id="uyh-zW-5K2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ImageView" destination="BQL-Fd-2CP" id="OBb-P2-bu9"/>
+                                            <outlet property="LabelArtistName" destination="Sm7-kk-rL3" id="VzI-eM-qPm"/>
+                                            <outlet property="LabelCollectionName" destination="bVW-jM-eMS" id="18D-T9-7P8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -103,6 +108,9 @@
                         <viewLayoutGuide key="safeArea" id="pGg-Rs-okS"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="MUSIC" selectedImage="music" id="q2X-UN-OHq"/>
+                    <connections>
+                        <outlet property="tableView" destination="89M-uK-XNJ" id="tG4-Ly-5nL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LmD-cw-vi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,7 +120,7 @@
         <scene sceneID="uO3-XT-gLT">
             <objects>
                 <tabBarController id="Y0f-rx-nnC" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="music" id="LHT-4I-885">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LHT-4I-885">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
