@@ -8,7 +8,11 @@
 
 import Foundation
 
-class Music : Codable{
+struct Music: Codable {
+    let resultCount: Int
+    let results: [Result]
+}
+struct Result : Codable{
     
     var wrapperType : String?
     var kind : String?

@@ -8,6 +8,7 @@
 
 import Foundation
 struct EndPointMusic {
-    public let strUrl = "https://itunes.apple.com/search?term=in+utero&mediaType=music&limit=20"
+    public let strUrl:String = "https://itunes.apple.com/search?term=in+utero&mediaType=music&limit=20"
+    
 }
 

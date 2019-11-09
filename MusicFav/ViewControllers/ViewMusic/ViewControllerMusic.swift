@@ -30,8 +30,19 @@ class ViewControllerMusic: UIViewController,UITableViewDataSource,UITableViewDel
             guard let contexts = contexts  else { return }
             print("Current contexts Object: \(contexts)")
             DispatchQueue.main.sync {
-                if let gtitle = contexts.artistName {
-                    print("gtitle :"+gtitle)
+             
+                
+                if let IdeArtista = contexts.results[0].artistId {
+                    print("IdeArtista :"+IdeArtista)
+                }
+                if let nombreArtista = contexts.results[0].artistName {
+                    print("nombreArtista :"+nombreArtista)
+                }
+                if let nombreColeccion = contexts.results[0].collectionName {
+                    print("nombreColeccion :"+nombreColeccion)
+                }
+                if let imagen100porc = contexts.results[0].artworkUrl100 {
+                    print("imagen100porc :"+imagen100porc)
                 }
             }
         }
