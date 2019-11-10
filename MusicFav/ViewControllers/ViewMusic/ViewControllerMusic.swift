@@ -37,7 +37,6 @@ class ViewControllerMusic: UIViewController,UITableViewDataSource,UITableViewDel
             print("Current contexts Object: \(contexts)")
             DispatchQueue.main.sync {
              
-                
                 if let IdeArtista = contexts.results[0].artistId {
                     print("IdeArtista :"+IdeArtista)
                      self.IdeArtisArray.append(IdeArtista as! String)
@@ -64,7 +63,7 @@ class ViewControllerMusic: UIViewController,UITableViewDataSource,UITableViewDel
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20 //ArtisArray.count
+        return 20 //IdeArtisArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
